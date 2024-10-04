@@ -1,0 +1,940 @@
+@font-face {
+    font-family: 'Norwester';
+    src: url('assets/fonts/Norwester-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'baskerville';
+    src: url('assets/fonts/Baskerville.ttc') format('opentype');
+    font-weight: normal;
+ 
+}
+@font-face {
+    font-family: 'baskervilleitalic';
+    src: url('assets/fonts/BaskervilleItalic.ttf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+ 
+}
+
+
+@font-face {
+    font-family: 'futura';
+    src: url('assets/fonts/futuramedium.ttf') format('opentype');
+    font-weight: normal;
+
+ 
+}
+@font-face {
+    font-family: 'ttfors';
+    src: url('assets/fonts/TTForsMedium.ttf') format('opentype');
+    font-weight: normal;
+
+ 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "futura", sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+}
+
+.screen {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.active {
+    display: block;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 15;
+    text-align: center;
+    /* background: rgb(0, 0, 0, .1); */
+}
+
+.overlay .GFX_Title{
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+#screen3 .bottom{
+    /* left: 50% !important; */
+    
+}
+.button {
+    padding: 20px 25px;
+    border: 2px solid white;
+    /* background: rgba(255, 255, 255, 0.0); Transparent background */
+    color: white; /* White text */
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'ttfors', sans-serif;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#startButton{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    
+}
+
+.button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text on hover */
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+.arrow{
+    width: 20px;
+    height: 20px;
+}
+#screen3 h1,.finalheading   {
+    font-size: 3.2rem;
+    font-family: 'ttfors', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.finalheading{
+    font-size: 3rem;
+    letter-spacing: 5px;
+}
+#screen3 .arrow{
+    top: 80%;
+}
+
+.bottom {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    bottom: -40px; /* Outside of the question box */
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+.screen3 .arrow.bottom{
+left: 50%;
+}
+.question-2,.question-3,.question-4,.question-5,.question-6,.question-7,.question-8{
+display: none;
+}
+.top {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    top: -40px; /* Outside of the question box */
+    left: 40%;
+}
+.question-box h2{
+    margin: 0px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+}
+.half {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    transition: opacity 0.5s;
+}
+.half img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.upper {
+    top: 0;
+}
+
+.lower {
+    bottom: 0;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    max-width: 80%;
+}
+
+.question-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px 20px;
+    color: white;
+    border: 2px solid white;
+    display: inline-block;
+    min-width: 40vw;
+    
+}
+
+.half{
+    /* background: rgba(0, 0, 0, 0.1); */
+}
+.questionoption{
+    font-size: 2rem;
+    /* background: rgba(0, 0, 0, 0.1); */
+    font-family: "futura" , sans-serif;
+    /* font-style: italic; */
+    text-transform: uppercase;
+    margin: 0px;
+    line-height: 2rem;
+}
+.final1 .italic,.final2 .italic{
+    font-family: "futura" , sans-serif;
+    /* font-style: italic !important; */
+}
+#upperHalf .overlay{
+    top:-50px;
+}
+#lowerHalf .overlay{
+    bottom:-50px;
+}
+
+#screen4 img:not(.rotate-image){
+ animation: zoom-in 60s ease;
+
+}
+.questionoption .maintext{
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: 'ttfors', sans-serif;
+    text-transform: uppercase;
+}
+.finalbottomimg{
+    
+}
+.selected .maintext:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    background: #fff;
+    animation: widthaa 1s ease;
+    /* width: 0; */
+  }
+ 
+  @keyframes widthaa {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+  }
+
+
+#qrCode {
+    margin-top: 4vh;
+    width: 200px;
+    margin-bottom: 10px;
+}
+#screen7 h1{
+
+}
+#werecomend{
+    width: 100%;
+    margin-bottom: 10px;
+    transition: width 2s ease-out;
+}
+.dimmed {
+    opacity: 0.5;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.text2 {
+    opacity: 0;
+    display: none;
+    
+}
+.text1 {
+    animation: slideUpFadeIn 1s ease;
+}
+.final1{
+    animation: slideUpFadeIn 1.6s ease;
+}
+
+#final1screen{
+    /* padding-top: 5vh; */
+    top: 25vh;
+    position: fixed;
+}
+/* Slide up and fade out animation for text1 */
+.slide-up-fade-out {
+    animation: slideUpFadeOut 1s forwards;
+}
+
+@keyframes slideUpFadeOut {
+    0% {
+        /* transform: translateY(50px); */
+        opacity: 1;
+    }
+  
+    100% {
+        /* transform: translateY(-50px); */
+        opacity: 0;
+    }
+}
+
+/* Slide up and fade in animation for text2 */
+.slide-up-fade-in {
+    animation: slideUpFadeIn 1s forwards;
+}
+
+@keyframes slideUpFadeIn {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Slide up entire screen */
+.screen-slide-up {
+    animation: screenSlideUp 2s forwards;
+}
+
+@keyframes screenSlideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-120%);
+    }
+}
+.scantext1{
+    font-size: 1.5rem;
+    margin: 0px;
+    font-weight: 100;
+}
+.scantext2{
+    display: none;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.text-slide-up{
+    animation: text-slide-upa 1.5s ease;
+    
+}
+@keyframes text-slide-upa{
+    0% {
+        opacity: .2;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* Container for the image */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The image itself */
+.image-container img:not(.endlogo) {
+    width: 100%;
+    height: 0;
+    animation: expandHeight 2s ease-out forwards;
+    object-fit: cover;
+}
+#final1 img,#final2 img{
+    object-fit: contain !important;
+}
+.Finallybottom{
+    height: 130px;
+}
+.image-container1 {
+    position: relative;
+    width: 80%;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.bottle{
+    z-index: 999;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 100px;
+}
+
+#bottle2,#bottle3,#bottle4, #bottle5, #bottle6, #bottle7{
+    /* display: none; */
+}
+.bottle {
+    opacity: 0;
+    transition: opacity 1s; /* Adjust duration as needed */
+}
+
+.bottle:first-of-type {
+    opacity: 1; /* Show the first bottle by default */
+}
+
+/* The image itself */
+.image-container1 img:not(.endlogo) {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation: fadein 1s forwards; /* Adjust duration
+    /* animation: expandHeight 1.5s ease-out forwards; */
+    object-fit: contain;
+    position: relative;
+    top: 5vh;
+
+}
+#screen6 .bottom{
+    bottom: 50px;
+    left: 50%; 
+}
+#screen6 .image-container{
+    flex-direction: column;
+}
+#screen6 #details1 img:nth-child(1){
+    width: 70%;
+    height: 220px !important;
+    object-fit: contain !important;
+}
+#screen6 #details1 img:nth-child(2){
+    max-height: 60vh;
+}
+#final2{
+    display: none;
+}
+.image-container1{
+    display: none;
+}
+.fade-out{
+    animation: fadeOut 1.5s forwards;
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/* Keyframes for expanding the height */
+@keyframes expandHeight {
+    from {
+        height: 0;
+    }
+    to {
+        height: 60%;
+    }
+}
+
+.text1q1{
+    top: 0px;
+    left: -50px;
+}
+.text1q1 span:nth-child(1){
+    position: relative;
+    left: -25%;
+}
+.text1q1 span:nth-child(2){
+    position: relative;
+    left: -5%;
+}
+
+.text2q1 span:nth-child(1){
+    position: relative;
+    right: -25%;
+}
+.text2q1 span:nth-child(2){
+    position: relative;
+    right: -5%;
+}
+
+/* ================== */
+.text1q2 span:nth-child(1){
+    position: relative;
+    left: -25%;
+}
+.text1q2 span:nth-child(2){
+    position: relative;
+    left: -19%;
+}
+.text1q2 span:nth-child(3){
+    position: relative;
+    left: -10%;
+}
+
+.text2q2 span:nth-child(1){
+    position: relative;
+    right: -10%;
+}
+.text2q2 span:nth-child(2){
+    position: relative;
+    right: -15%;
+}
+.text2q2 span:nth-child(3){
+    position: relative;
+    right: -5%;
+}
+
+/* ================== */
+.text1q3 span:nth-child(1){
+    position: relative;
+    left: -15%;
+}
+.text1q3 span:nth-child(2){
+    position: relative;
+    left: -5%;
+}
+.text1q3 span:nth-child(3){
+    position: relative;
+    left: 0;
+}
+
+.text2q3 span:nth-child(1){
+    position: relative;
+    right: -20%;
+}
+.text2q3 span:nth-child(2){
+    position: relative;
+    right: -10%;
+}
+
+/* ============== */
+.text2q4 span:nth-child(1){
+    position: relative;
+    left: -25%;
+    
+}
+.text2q4 span:nth-child(2){
+    position: relative;
+    left: -15%;
+    
+}
+
+.text1q4 span:nth-child(1){
+    position: relative;
+    right: -13%;
+}
+.text1q4 span:nth-child(2){
+    position: relative;
+    right: -25%;
+}
+
+/* ============================================ */
+
+
+.text1q5 span:nth-child(1){
+    position: relative;
+    left: -25%;
+}
+.text1q5 span:nth-child(2){
+    position: relative;
+    left: -10%;
+}
+.text1q5 span:nth-child(3){
+    position: relative;
+    left: -13%;
+}
+.text1q5 span:nth-child(4){
+    position: relative;
+    left: -5%;
+}
+
+
+.text2q5 span:nth-child(1){
+    position: relative;
+    right: 5%;
+}
+.text2q5 span:nth-child(2){
+    position: relative;
+    right: -10%;
+}
+.text2q5 span:nth-child(3){
+    position: relative;
+    right: -23%;
+}
+.text2q5 span:nth-child(4){
+    position: relative;
+    right: -30%;
+}
+
+
+/* ==================== */
+.text1q6 span:nth-child(1){
+    position: relative;
+    left: 0%;
+}
+.text1q6 span:nth-child(2){
+    position: relative;
+    left: -5%;
+}
+.text1q6 span:nth-child(3){
+    position: relative;
+    left: -15%;
+}
+
+
+.text2q6 span:nth-child(1){
+    position: relative;
+    right: 10%;
+}
+.text2q6 span:nth-child(2){
+    position: relative;
+    right: -5%;
+}
+.text2q6 span:nth-child(3){
+    position: relative;
+    right: -15%;
+}
+
+
+
+/* ==================== */
+.text1q7 span:nth-child(1){
+    position: relative;
+    left: -25%;
+}
+.text1q7{
+    top:-200px !important;
+}
+.werecommend{
+    font-size: 4rem;
+    font-weight: 400;
+}
+.text1q7 span:nth-child(2){
+    position: relative;
+    left: -7%;
+}
+
+.text2q7 span:nth-child(1){
+    position: relative;
+    left: -25%;
+}
+.text2q7 span:nth-child(2){
+    position: relative;
+    left: -15%;
+}
+
+#screen7 .overlay{
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    
+}
+#lowerHalf,#upperHalf{
+    /* background: rgb(0, 0, 0, .2); */
+}
+#lowerHalf .questionoption{
+    opacity: 0;
+    animation: slideinleft .7s ease-in; 
+    animation-delay: 1s;
+     animation-fill-mode: forwards;
+}
+#upperHalf .questionoption{
+    opacity: 0;
+    animation: slideinright .7s ease-in;
+    animation-delay: 1s;
+     animation-fill-mode: forwards;
+}
+.question-box h2{
+    font-weight: normal !important;
+    max-width: 70vw;
+}
+#overlaylookup{
+    background-color: rgb(0, 0, 0, .6);
+}
+#overlaylookup{
+    animation: fadein 1.5s ease-out forwards;
+}
+
+.italictext{
+    font-family: "futura" , sans-serif;
+    /* font-style: italic; */
+}
+@keyframes slideinright {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes slideinleft {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+
+.bgoverlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 9;
+}
+.bgoverlay1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+.half .questionoption{
+    z-index: 999;
+}
+.half img, .half video{
+    z-index: 1;
+}
+
+
+#backButton{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 20px 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+}
+#restartbutton{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+    padding: 10px 10px 8px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+}
+.hidden{
+      opacity: 0;
+}
+
+.rotate-image {
+    animation: rotation 90s infinite linear;
+    scale: 2;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  .questionbox .center{
+    animation: growin 1.5s forwards;
+    object-position: center center;
+    width: 100vw;
+  }
+  
+  @keyframes growin {
+    from{
+        opacity: 0.1;
+        /* transform: scale(0.8) translate(-50%, -50%); */
+        line-height: 0.2;
+
+    }
+    to{
+        opacity: 1;
+        /* transform: scale(1) translate(-50%, -50%); */
+        line-height: 1.3;
+        
+    }
+  }
+  @keyframes fadein {
+    from{
+        opacity: 0.1;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+  }
+
+
+
+
+  .videooverlay{
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  @keyframes zoom-in {
+    from {
+        scale: 1;
+        
+    }
+    to {
+        scale: 1.2;
+        
+    }
+  }
+
+
+  .endlogo{
+    opacity: 0;
+    position: fixed;
+    top: 100px;
+    height: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: fadein  1s forwards;
+  }
+
+  .Finallybottom{
+    opacity: 0;
+    position: fixed;
+    top: 100px;
+    height: 150px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: fadein  1s forwards;
+}
+.finalheading{
+    margin-bottom: 0px;
+}
+  .finaltexttitle{
+    position: relative;
+    top: 5vh;
+    width: 100%;
+  }
+  .endtext{
+    display: flex;
+    justify-content: center;
+  }
+  
+  #finaltitle{
+    font-size: 4rem;
+    margin: 0px;
+  }
+  .endtext hr{
+    width: 80px;
+    color: white;
+    border: 2px solid;
+    height: 0px;
+    line-height: 100px;
+    margin-top: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .endtext h2{
+    
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 8px;
+    letter-spacing: 10px;
+    font-weight: 400;
+  }
+
+  #flavordetails1{
+    font-size: 2.2rem;
+    text-transform: math-auto;
+    font-weight: 500;
+  }
+
+  #flavordetails2{
+    font-weight: 100;
+    text-transform: math-auto;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+.flavordescription{
+    opacity: 0;
+    margin-top: 10vh;
+    animation: fadein 2s forwards;
+}
